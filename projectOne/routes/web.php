@@ -37,3 +37,12 @@ Route::get('/portfolio', function () {
 Route::get('/user/{id}', function ($id) {
     return $id;
 });
+
+// Route::get('post/{post_id}/comment/{comment_id}', function($post_id, $comment_id){
+//     // return $post_id . $comment_id;
+//     return "Post ID: " . $post_id . " Comment ID: " . $comment_id;
+// });
+
+Route::get('post/{post_id}/comment/{comment_id}', function($post_id, $comment_id){
+    return "Post ID :" . $post_id . "Comment ID :" . $comment_id;
+});
