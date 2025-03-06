@@ -57,3 +57,7 @@ Route::get('manager/{id}/{name}', function($id, $name){
 Route::get('employee/{id}/{name}', function($id, $name){
     return "Employee ID: " . $id . " Employee Name: " . $name;
 })->whereNumber('id')->whereAlpha('name');
+
+Route::fallback(function(){
+    return "Defualt Message";
+});
