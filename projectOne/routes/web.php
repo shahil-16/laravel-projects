@@ -33,3 +33,7 @@ Route::get('/service', function () {
 Route::get('/portfolio', function () {
     return "Portfolio Page";
 });
+
+Route::get('/user/{id}', function ($id) {
+    return $id;
+});
