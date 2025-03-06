@@ -42,7 +42,10 @@ Route::get('post/{post_id}/comment/{comment_id}', function($post_id, $comment_id
     return "Post ID :" . $post_id . "Comment ID :" . $comment_id;
 });
 
-
-Route::get('student/{name?}', function($name =""){
+Route::get('student/{name?}', function($name ="Shahil"){
     return "Hello " .$name ;
 });
+
+Route::get('product/{p_name}', function($name){
+    return "Product Name: " . $name;
+})->where('p_name', '[A-Za-z]+');
