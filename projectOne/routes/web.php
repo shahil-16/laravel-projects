@@ -49,3 +49,11 @@ Route::get('student/{name?}', function($name ="Shahil"){
 Route::get('product/{p_name}', function($name){
     return "Product Name: " . $name;
 })->where('p_name', '[A-Za-z]+');
+
+Route::get('manager/{id}/{name}', function($id, $name){
+    return "Manager ID: " . $id . " Manager Name: " . $name;
+})->where(['id'=>'[0-9]+', 'name'=>'[a-z]+']);
+
+Route::get('employee/{id}/{name}', function($id, $name){
+    return "Employee ID: " . $id . " Employee Name: " . $name;
+})->whereNumber('id')->whereAlpha('name');
