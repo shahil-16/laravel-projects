@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>User Profile</h1>
+    <h1>Admin Profile</h1>
 </body>
 </html>
