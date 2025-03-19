@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-
+use App\Http\Controllers\DetailsController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +16,11 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome', ['name' => 'Shahil', 'nm' => 'Apple iPhone', 'price' => 150000 ]);
+// });
 
 Route::get('display',[ContactController::class, 'display']);
+Route::get('detail',[DetailsController::class,'detail']);
+Route::get('product',[ProductController::class,'product']);
+Route::get('/',[WelcomeController::class,'welcome']);
