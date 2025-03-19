@@ -70,6 +70,55 @@
  @for($i = 0; $i<4; $i++)
   <h2>{{$i}}</h2>
  @endfor 
+
+ <!-- @foreach($students as $stu)
+  <h2>{{$stu}}</h2>
+ @endforeach   -->
+<!-- 
+ @forelse($students as $stu)
+  <h2>{{$stu}}</h2>
+ @empty
+  <h2>No Students</h2>
+ @endforelse  -->
+
  
+ <!-- @foreach ($students as $stu)
+  @if ($stu == 'Raj')
+   @break      
+  @endif
+  <h2>{{$stu}}</h2>    
+ @endforeach  -->
+
+ <!-- @foreach ($students as $stu)
+  @if ($stu == 'Raj')
+   @continue 
+  @endif
+  <h2>{{$stu}}</h2>    
+ @endforeach   -->
+
+
+ 
+
+<!-- @foreach ($students as $stu)
+ @break($stu == 'Raj')
+ <h2>{{$stu}}</h2>
+ @endforeach -->
+
+  <!-- @foreach ($students as $stu)
+  @continue($stu == 'Raj')      
+  <h2>{{$stu}}</h2>    
+ @endforeach   -->
+
+
+   @foreach($students as $stu)
+  <h2>{{$stu}}</h2>
+  @if ($loop->first)
+   <h3>This is First Loop</h3>      
+  @endif
+  @if ($loop->last)
+   <h3>This is Last Loop</h3>      
+  @endif
+ @endforeach  
+
 </body>
 </html>

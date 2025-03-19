@@ -8,7 +8,8 @@ class ContactController extends Controller
 {
     function display(){
         $name = 'Shahil';
-        return view('contacts',['nm' => $name]);
+        $students = ['Rahul', 'Sumit', 'Raj', 'Kunal'];
+        return view('contacts',['nm' => $name , 'students'=>$students]);
         // return view('contacts', ['nm' => 'Shahil']);
 
     }
